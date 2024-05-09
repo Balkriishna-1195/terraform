@@ -1,3 +1,4 @@
+# Ec2 variables
 variable "instance_names" {
     type = list
     default = ["db","backend","frontend"]
@@ -21,6 +22,7 @@ variable "common_tags" {
     }
 }
 
+#sg variables
 variable "sg_name" {
     default = "allow_ssh"
 }
@@ -40,4 +42,14 @@ variable "protocol" {
 variable "allowed_cidr" {
     type = list(string)
     default = ["0.0.0.0/0"]
+}
+
+# r53 variable
+
+variable "zone_id" {
+  default = "Z01504843BMRSWVNPZ1S0"
+}
+
+variable "domain_name" {
+  default = "balkriishna.online"
 }
